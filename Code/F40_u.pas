@@ -62,9 +62,9 @@ VAR
 begin
   RedOutput.Lines.Clear;
   RedOutput.Visible := True;
-  if fileexists('f40Bio.txt') then
+  if fileexists('Textfile\f40Bio.txt') then
   begin
-    assignfile(TFile, 'f40Bio.txt');
+    assignfile(TFile, 'Textfile\f40Bio.txt');
     reset(TFile);
     while not eof(TFile) do
     begin
@@ -82,9 +82,9 @@ begin
   RedOutput.ScrollBars := ssVertical;
   RedOutput.Lines.Clear;
   RedOutput.Visible := True;
-  if fileexists('Directions.txt') then
+  if fileexists('Textfile\Directions.txt') then
   begin
-    assignfile(TFile, 'Directions.txt');
+    assignfile(TFile, 'Textfile\Directions.txt');
     reset(TFile);
     while not eof(TFile) do
     begin
