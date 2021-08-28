@@ -44,9 +44,9 @@ procedure TFrmJapan.BtnJapaneseCarsClick(Sender: TObject);
 begin
   RedOutput.ScrollBars := ssnone;
   RedOutput.Lines.Clear;
-  if fileexists('JapaneseCars.txt') then
+  if fileexists('Textfile\JapaneseCars.txt') then
   begin
-    assignfile(TFile, 'JapaneseCars.txt');
+    assignfile(TFile, 'Textfile\JapaneseCars.txt');
     reset(TFile);
     while not eof(TFile) do
     begin
@@ -60,9 +60,9 @@ procedure TFrmJapan.BtnJapaneseHistoryClick(Sender: TObject);
 begin
   RedOutput.ScrollBars := ssvertical;
   RedOutput.Lines.Clear;
-  if fileexists('JapaneseHist.txt') then
+  if fileexists('Textfile\JapaneseHist.txt') then
   begin
-    assignfile(TFile, 'JapaneseHist.txt');
+    assignfile(TFile, 'Textfile\JapaneseHist.txt');
     reset(TFile);
     while not eof(TFile) do
     begin
