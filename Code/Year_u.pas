@@ -126,9 +126,9 @@ begin
     if sPrize <> '' then
     begin
       RedDisplay.Lines.Add('You have won: ' + sPrize); // Displaying the prize
-      if fileexists('CarTriviaWinners.txt') then
+      if fileexists('Textfile\CarTriviaWinners.txt') then
       begin
-        AssignFile(TFile, 'CarTriviaWinners.txt');
+        AssignFile(TFile, 'Textfile\CarTriviaWinners.txt');
         Reset(TFile);
         Append(TFile);
         Writeln(TFile, sName + '@' + sPrize);
