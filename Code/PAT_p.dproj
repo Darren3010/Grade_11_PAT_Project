@@ -1,0 +1,250 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{198AC4B3-AF4A-4516-991C-3B3791BCF397}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>PAT_p.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclx;vcl;vclimg;dbrtl;Rave77VCL;bdertl;rtl;vclactnband;xmlrtl;vcldb;vcldbx;vcltouch;dsnap;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;Project1;pkg_buttongroup;pkg_microsoftword</DCC_UsePackage>
+			<DCC_DependencyCheckOutputName>PAT_p.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="PAT_p.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="Splash_u.pas">
+				<Form>FrmSplash</Form>
+			</DCCReference>
+			<DCCReference Include="Login_u.pas">
+				<Form>FrmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="Home_u.pas">
+				<Form>FrmHome</Form>
+			</DCCReference>
+			<DCCReference Include="EditHome_u.pas">
+				<Form>FrmEditHome</Form>
+			</DCCReference>
+			<DCCReference Include="Europe_u.pas">
+				<Form>FrmEurope</Form>
+			</DCCReference>
+			<DCCReference Include="America_u.pas">
+				<Form>FrmAmerica</Form>
+			</DCCReference>
+			<DCCReference Include="Asia_u.pas">
+				<Form>FrmAsia</Form>
+			</DCCReference>
+			<DCCReference Include="Oceanic_u.pas">
+				<Form>FrmOceanic</Form>
+			</DCCReference>
+			<DCCReference Include="Italy_u.pas">
+				<Form>FrmItaly</Form>
+			</DCCReference>
+			<DCCReference Include="Sweden_u.pas">
+				<Form>FrmSweden</Form>
+			</DCCReference>
+			<DCCReference Include="Germany_u.pas">
+				<Form>FrmGermany</Form>
+			</DCCReference>
+			<DCCReference Include="France_u.pas">
+				<Form>FrmFrance</Form>
+			</DCCReference>
+			<DCCReference Include="UK_u.pas">
+				<Form>FrmUK</Form>
+			</DCCReference>
+			<DCCReference Include="USA_u.pas">
+				<Form>FrmUSA</Form>
+			</DCCReference>
+			<DCCReference Include="Japan_u.pas">
+				<Form>FrmJapan</Form>
+			</DCCReference>
+			<DCCReference Include="Australia_u.pas">
+				<Form>FrmAustralia</Form>
+			</DCCReference>
+			<DCCReference Include="Porsche911_u.pas">
+				<Form>FrmPorsche911</Form>
+			</DCCReference>
+			<DCCReference Include="Mustang_u.pas">
+				<Form>FrmMustang</Form>
+			</DCCReference>
+			<DCCReference Include="Miura_u.pas">
+				<Form>FrmMiura</Form>
+			</DCCReference>
+			<DCCReference Include="Merc300SL_u.pas">
+				<Form>Frm300SL</Form>
+			</DCCReference>
+			<DCCReference Include="F40_u.pas">
+				<Form>FrmF40</Form>
+			</DCCReference>
+			<DCCReference Include="GT40_u.pas">
+				<Form>FrmGT40</Form>
+			</DCCReference>
+			<DCCReference Include="DB5_u.pas">
+				<Form>FrmDB5</Form>
+			</DCCReference>
+			<DCCReference Include="Golf_u.pas">
+				<Form>FrmGolf</Form>
+			</DCCReference>
+			<DCCReference Include="EType_u.pas">
+				<Form>FrmEType</Form>
+			</DCCReference>
+			<DCCReference Include="Corvette_u.pas">
+				<Form>FrmCorvette</Form>
+			</DCCReference>
+			<DCCReference Include="Year_u.pas">
+				<Form>FrmYear</Form>
+			</DCCReference>
+			<DCCReference Include="Races_u.pas">
+				<Form>FrmRaces</Form>
+			</DCCReference>
+			<DCCReference Include="TopSpeed_u.pas">
+				<Form>FrmTopSpeed</Form>
+			</DCCReference>
+			<DCCReference Include="Clothes_u.pas">
+				<Form>FrmClothes</Form>
+			</DCCReference>
+			<DCCReference Include="One_u.pas">
+				<Form>FrmOne</Form>
+			</DCCReference>
+			<None Include="Username_Password.txt"/>
+			<None Include="Email.txt"/>
+			<None Include="Name_Surname_Age.txt"/>
+			<None Include="AustraliaHist.txt"/>
+			<None Include="AustralianCars.txt"/>
+			<None Include="FrenchCars.txt"/>
+			<None Include="FrenchHist.txt"/>
+			<None Include="GermanCars.txt"/>
+			<None Include="GermanHist.txt"/>
+			<None Include="ItalianCars.txt"/>
+			<None Include="ItalianHist.txt"/>
+			<None Include="JapaneseCars.txt"/>
+			<None Include="JapaneseHist.txt"/>
+			<None Include="SwedishCars.txt"/>
+			<None Include="SwedishHist.txt"/>
+			<None Include="BritishCars.txt"/>
+			<None Include="BritishCarHist.txt"/>
+			<None Include="AmericanCars.txt"/>
+			<None Include="AmericanHist.txt"/>
+			<None Include="ModelSupport_PAT_p\default.txaPackage"/>
+			<None Include="EasyQuestion.txt"/>
+			<None Include="EasyAnswer.txt"/>
+			<None Include="MediumQuestion.txt"/>
+			<None Include="MediumAnswer.txt"/>
+			<None Include="HardAnswer.txt"/>
+			<None Include="HardQuestion.txt"/>
+			<None Include="Points.txt"/>
+			<None Include="CarTriviaHelp.txt"/>
+			<None Include="HallHelp.txt"/>
+			<None Include="GiftHelp.txt"/>
+			<None Include="ContinentText.txt"/>
+			<None Include="Reciept.txt"/>
+			<None Include="CarTriviaWinners.txt"/>
+			<None Include="CorvetteBio.txt"/>
+			<None Include="DB5Bio.txt"/>
+			<None Include="etypeBio.txt"/>
+			<None Include="f40Bio.txt"/>
+			<None Include="golfBio.txt"/>
+			<None Include="gtBio.txt"/>
+			<None Include="300slBio.txt"/>
+			<None Include="miuraBio.txt"/>
+			<None Include="mustangBio.txt"/>
+			<None Include="911Bio.txt"/>
+			<None Include="Directions.txt"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">PAT_p.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\bcboffice2k140.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\bcbofficexp140.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\pkg_windowsmediaplayer.bpl">File C:\Users\Public\Documents\RAD Studio\7.0\Bpl\pkg_windowsmediaplayer.bpl not found</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\Movies_p.bpl">Windows Media Player</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
