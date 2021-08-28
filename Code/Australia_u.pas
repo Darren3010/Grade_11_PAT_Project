@@ -44,9 +44,9 @@ procedure TFrmAustralia.BtnAustraliaCarHistoryClick(Sender: TObject);
 begin
   RedOutput.ScrollBars := ssvertical;
   RedOutput.Lines.Clear;
-  if FileExists('Textfile/AustraliaHist.txt') then
+  if FileExists('Textfile\AustraliaHist.txt') then
   begin
-    AssignFile(TFile, 'Textfile/AustraliaHist.txt');
+    AssignFile(TFile, 'Textfile\AustraliaHist.txt');
     reset(TFile);
     while not eof(TFile) do
     begin
@@ -61,9 +61,9 @@ procedure TFrmAustralia.BtnAustraliaCarsClick(Sender: TObject);
 begin
   RedOutput.ScrollBars := ssnone;
   RedOutput.Lines.Clear;
-  if FileExists('Textfile/AustralianCars.txt') then
+  if FileExists('Textfile\AustralianCars.txt') then
   begin
-    AssignFile(TFile, 'Textfile/AustralianCars.txt');
+    AssignFile(TFile, 'Textfile\AustralianCars.txt');
     reset(TFile);
     while not eof(TFile) do
     begin
