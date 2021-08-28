@@ -63,9 +63,9 @@ begin
   end;
   if iDifficulty = 0 then
   begin
-    if fileexists('EasyQuestion.txt') then
+    if fileexists('Textfile\EasyQuestion.txt') then
     begin
-      assignfile(TFile, 'EasyQuestion.txt');
+      assignfile(TFile, 'Textfile\EasyQuestion.txt');
       reset(TFile);
     end;
     for I := 1 to 10 do
@@ -73,9 +73,9 @@ begin
       readln(TFile, ArrQuestion[I]);
     end; // easy option
 
-    if fileexists('EasyAnswer.txt') then
+    if fileexists('Textfile\EasyAnswer.txt') then
     begin
-      assignfile(TFile1, 'EasyAnswer.txt');
+      assignfile(TFile1, 'Textfile\EasyAnswer.txt');
       reset(TFile1);
     end;
     for I := 1 to 10 do
@@ -102,9 +102,9 @@ begin
 
   if iDifficulty = 1 then
   begin
-    if fileexists('MediumQuestion.txt') then
+    if fileexists('Textfile\MediumQuestion.txt') then
     begin
-      assignfile(TFile, 'MediumQuestion.txt');
+      assignfile(TFile, 'Textfile\MediumQuestion.txt');
       reset(TFile);
     end;
     for I := 1 to 10 do
@@ -112,9 +112,9 @@ begin
       readln(TFile, ArrQuestion[I]);
     end; // easy option
 
-    if fileexists('MediumAnswer.txt') then
+    if fileexists('Textfile\MediumAnswer.txt') then
     begin
-      assignfile(TFile1, 'MediumAnswer.txt');
+      assignfile(TFile1, 'Textfile\MediumAnswer.txt');
       reset(TFile1);
     end;
     for I := 1 to 10 do
@@ -141,9 +141,9 @@ begin
 
   if iDifficulty = 2 then
   begin
-    if fileexists('HardQuestion.txt') then
+    if fileexists('Textfile\HardQuestion.txt') then
     begin
-      assignfile(TFile, 'HardQuestion.txt');
+      assignfile(TFile, 'Textfile\HardQuestion.txt');
       reset(TFile);
     end;
     for I := 1 to 10 do
@@ -151,9 +151,9 @@ begin
       readln(TFile, ArrQuestion[I]);
     end; // easy option
 
-    if fileexists('HardAnswer.txt') then
+    if fileexists('Textfile\HardAnswer.txt') then
     begin
-      assignfile(TFile1, 'HardAnswer.txt');
+      assignfile(TFile1, 'Textfile\HardAnswer.txt');
       reset(TFile1);
     end;
     for I := 1 to 10 do
@@ -193,9 +193,9 @@ VAR
   TFile: Textfile;
 begin
   FrmTopSpeed.position := podesktopcenter;
-  if fileexists('Points.txt') then
+  if fileexists('Textfile\Points.txt') then
   begin
-    assignfile(TFile, 'Points.txt');
+    assignfile(TFile, 'Textfile\Points.txt');
     reset(TFile);
   end;
   while not eof(TFile) do
