@@ -44,9 +44,9 @@ procedure TFrmGermany.BtnGermanCarHistClick(Sender: TObject);
 begin
   RedOutput.ScrollBars := ssvertical;
   RedOutput.Lines.Clear;
-  if fileexists('GermanHist.txt') then
+  if fileexists('Textfile\GermanHist.txt') then
   begin
-    AssignFile(TFile, 'GermanHist.txt');
+    AssignFile(TFile, 'Textfile\GermanHist.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
@@ -61,9 +61,9 @@ procedure TFrmGermany.BtnGermanCarsClick(Sender: TObject);
 begin
   RedOutput.ScrollBars := ssnone;
   RedOutput.Lines.Clear;
-  if fileexists('GermanCars.txt') then
+  if fileexists('Textfile\GermanCars.txt') then
   begin
-    AssignFile(TFile, 'GermanCars.txt');
+    AssignFile(TFile, 'Textfile\GermanCars.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
