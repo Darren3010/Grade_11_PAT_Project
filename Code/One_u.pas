@@ -162,7 +162,7 @@ begin
     (bValidCardNumber = true) and (bValidCVC = true) and
     (bValidExpiryDate = true) then
   begin
-    AssignFile(TFile, 'Reciept.txt');
+    AssignFile(TFile, 'Textfile\Reciept.txt');
     reset(TFile);
     Append(TFile);
     writeln(TFile, sName);
