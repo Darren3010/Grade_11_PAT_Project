@@ -83,9 +83,9 @@ begin
     LblEdtPassword.SetFocus;
     exit;
   end;
-  if fileexists('Username_Password.txt') then
+  if fileexists('Textfile\Username_Password.txt') then
   begin
-    assignfile(TFile, 'Username_Password.txt');
+    assignfile(TFile, 'Textfile\Username_Password.txt');
     reset(TFile);
     while not eof(TFile) do
     begin
@@ -184,9 +184,9 @@ begin
     LblEdtConfirm.Color := clRed;
     exit;
   end;
-  if (fileexists('Username_Password.txt')) and (sPass = sRetyped) then
+  if (fileexists('Textfile\Username_Password.txt')) and (sPass = sRetyped) then
   begin
-    assignfile(TFile, 'Username_Password.txt');
+    assignfile(TFile, 'Textfile\Username_Password.txt');
     reset(TFile);
     append(TFile);
     writeln(TFile, sUser + '@' + sPass);
@@ -199,21 +199,21 @@ begin
   begin
     showmessage('File does not exist.');
   end;
-  if (fileexists('Email.txt')) and (LblEdtEmail.Text <> '') then
+  if (fileexists('Textfile\Email.txt')) and (LblEdtEmail.Text <> '') then
   begin
     iRandomNumber := random(99);
     showmessage(
       'We have given you a random number to enter in the newsletter screen if you would like to recieve our newsletter: ' + inttostr(iRandomNumber));
-    assignfile(TEmail, 'Email.txt');
+    assignfile(TEmail, 'Textfile\Email.txt');
     reset(TEmail);
     append(TEmail);
     writeln(TEmail, inttostr(iRandomNumber) + sEmail);
     closefile(TEmail);
   end;
-  if (fileexists('Name_Surname_Age.txt')) and (sName <> '') and
+  if (fileexists('Textfile\Name_Surname_Age.txt')) and (sName <> '') and
     (sSurname <> '') and (sAge <> '') then
   begin
-    assignfile(TName, 'Name_Surname_Age.txt');
+    assignfile(TName, 'Textfile\Name_Surname_Age.txt');
     reset(TName);
     append(TName);
     writeln(TName, sName + '@' + sSurname + '#' + sAge);
