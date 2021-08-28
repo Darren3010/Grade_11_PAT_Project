@@ -58,9 +58,9 @@ uses Home_u;
 procedure TFrmEditHome.BtnCarTriviaClick(Sender: TObject);
 begin
   RedDisplay.Lines.Clear;
-  if fileexists('CarTriviaHelp.txt') then
+  if fileexists('Textfile\CarTriviaHelp.txt') then
   begin
-    AssignFile(TFile, 'CarTriviaHelp.txt');
+    AssignFile(TFile, 'Textfile\CarTriviaHelp.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
@@ -75,9 +75,9 @@ end;
 procedure TFrmEditHome.BtnContinentClick(Sender: TObject);
 begin
   RedDisplay.Lines.Clear;
-  if fileexists('ContinentText.txt') then
+  if fileexists('Textfile\ContinentText.txt') then
   begin
-    AssignFile(TFile, 'ContinentText.txt');
+    AssignFile(TFile, 'Textfile\ContinentText.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
@@ -92,9 +92,9 @@ end;
 procedure TFrmEditHome.BtnGiftShopClick(Sender: TObject);
 begin
   RedDisplay.Lines.Clear;
-  if fileexists('GiftHelp.txt') then
+  if fileexists('Textfile\GiftHelp.txt') then
   begin
-    AssignFile(TFile, 'GiftHelp.txt');
+    AssignFile(TFile, 'Textfile\GiftHelp.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
@@ -115,9 +115,9 @@ end;
 procedure TFrmEditHome.BtnHallHelpClick(Sender: TObject);
 begin
   RedDisplay.Lines.Clear;
-  if fileexists('HallHelp.txt') then
+  if fileexists('Textfile\HallHelp.txt') then
   begin
-    AssignFile(TFile, 'HallHelp.txt');
+    AssignFile(TFile, 'Textfile\HallHelp.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
@@ -141,7 +141,7 @@ begin
   RedDisplay.Lines.Clear;
   if sFile = '1' then
   begin
-    AssignFile(TFile1, 'ContinentText.txt');
+    AssignFile(TFile1, 'Textfile\ContinentText.txt');
     rewrite(TFile1);
     writeln(TFile1, sChange);
     closefile(TFile1);
@@ -150,7 +150,7 @@ begin
 
   if sFile = '2' then
   begin
-    AssignFile(TFile1, 'HallHelp.txt');
+    AssignFile(TFile1, 'Textfile\HallHelp.txt');
     rewrite(TFile1);
     writeln(TFile1, sChange);
     closefile(TFile1);
@@ -159,7 +159,7 @@ begin
 
   if sFile = '3' then
   begin
-    AssignFile(TFile1, 'CarTriviaHelp.txt');
+    AssignFile(TFile1, 'Textfile\CarTriviaHelp.txt');
     rewrite(TFile1);
     writeln(TFile1, sChange);
     closefile(TFile1);
@@ -168,7 +168,7 @@ begin
 
   if sFile = '4' then
   begin
-    AssignFile(TFile1, 'GiftHelp.txt');
+    AssignFile(TFile1, 'Textfile\GiftHelp.txt');
     rewrite(TFile1);
     writeln(TFile1, sChange);
     closefile(TFile1);
@@ -192,7 +192,7 @@ begin
       begin
         ImgContinent.Picture.LoadFromFile('Pictures\America.JPEG');
         iDifference := 2020 - iYear;
-        AssignFile(TFile, 'AmericanCars.txt');
+        AssignFile(TFile, 'Textfile\AmericanCars.txt');
         Reset(TFile);
         while not eof(TFile) do
         begin
@@ -206,7 +206,7 @@ begin
         begin
           closefile(TFile);
 
-          AssignFile(TFile1, 'AmericanCars.txt');
+          AssignFile(TFile1, 'Textfile\AmericanCars.txt');
           Reset(TFile1);
           append(TFile1);
           writeln(TFile1, sCar + ' - ' + sExhibit);
@@ -225,7 +225,7 @@ begin
       begin
         ImgContinent.Picture.LoadFromFile('Pictures\Asia.JPEG');
         iDifference := 2020 - iYear;
-        AssignFile(TFile, 'JapaneseCars.txt');
+        AssignFile(TFile, 'Textfile\JapaneseCars.txt');
         Reset(TFile);
         while not eof(TFile) do
         begin
@@ -238,7 +238,7 @@ begin
         if (iDifference > 29) and (bValidExhibit = true) then
         begin
           closefile(TFile);
-          AssignFile(TFile1, 'Japanese.txt');
+          AssignFile(TFile1, 'Textfile\Japanese.txt');
           Reset(TFile1);
           append(TFile1);
           writeln(TFile1, sCar + ' - ' + sExhibit);
@@ -257,7 +257,7 @@ begin
       begin
         ImgContinent.Picture.LoadFromFile('Pictures\Australia.JPEG');
         iDifference := 2020 - iYear;
-        AssignFile(TFile, 'AustralianCars.txt');
+        AssignFile(TFile, 'Textfile\AustralianCars.txt');
         Reset(TFile);
         while not eof(TFile) do
         begin
@@ -270,7 +270,7 @@ begin
         if (iDifference > 29) and (bValidExhibit = true) then
         begin
           closefile(TFile);
-          AssignFile(TFile1, 'AustralianCars.txt');
+          AssignFile(TFile1, 'Textfile\AustralianCars.txt');
           Reset(TFile1);
           append(TFile1);
           writeln(TFile1, sCar + ' - ' + sExhibit);
@@ -289,7 +289,7 @@ begin
       begin
         ImgContinent.Picture.LoadFromFile('Pictures\Europe Green.JPEG');
         iDifference := 2020 - iYear;
-        AssignFile(TFile, 'SwedishCars.txt');
+        AssignFile(TFile, 'Textfile\SwedishCars.txt');
         Reset(TFile);
         while not eof(TFile) do
         begin
@@ -302,7 +302,7 @@ begin
         if (iDifference > 29) and (bValidExhibit = true) then
         begin
           closefile(TFile);
-          AssignFile(TFile1, 'SwedishCars.txt');
+          AssignFile(TFile1, 'Textfile\SwedishCars.txt');
           Reset(TFile1);
           append(TFile1);
           writeln(TFile1, sCar + ' - ' + sExhibit);
@@ -321,7 +321,7 @@ begin
       begin
         ImgContinent.Picture.LoadFromFile('Pictures\Europe Green.JPEG');
         iDifference := 2020 - iYear;
-        AssignFile(TFile, 'FrenchCars.txt');
+        AssignFile(TFile, 'Textfile\FrenchCars.txt');
         Reset(TFile);
         while not eof(TFile) do
         begin
@@ -334,7 +334,7 @@ begin
         if (iDifference > 29) and (bValidExhibit = true) then
         begin
           closefile(TFile);
-          AssignFile(TFile1, 'FrenchCars.txt');
+          AssignFile(TFile1, 'Textfile\FrenchCars.txt');
           Reset(TFile1);
           append(TFile1);
           writeln(TFile1, sCar + ' - ' + sExhibit);
@@ -353,7 +353,7 @@ begin
       begin
         ImgContinent.Picture.LoadFromFile('Pictures\Europe Green.JPEG');
         iDifference := 2020 - iYear;
-        AssignFile(TFile, 'ItalianCars.txt');
+        AssignFile(TFile, 'Textfile\ItalianCars.txt');
         Reset(TFile);
         while not eof(TFile) do
         begin
@@ -366,7 +366,7 @@ begin
         if (iDifference > 29) and (bValidExhibit = true) then
         begin
           closefile(TFile);
-          AssignFile(TFile1, 'ItalianCars.txt');
+          AssignFile(TFile1, 'Textfile\ItalianCars.txt');
           Reset(TFile1);
           append(TFile1);
           writeln(TFile1, sCar + ' - ' + sExhibit);
@@ -385,7 +385,7 @@ begin
       begin
         ImgContinent.Picture.LoadFromFile('Pictures\Europe Green.JPEG');
         iDifference := 2020 - iYear;
-        AssignFile(TFile, 'GermanCars.txt');
+        AssignFile(TFile, 'Textfile\GermanCars.txt');
         Reset(TFile);
         while not eof(TFile) do
         begin
@@ -398,7 +398,7 @@ begin
         if (iDifference > 29) and (bValidExhibit = true) then
         begin
           closefile(TFile);
-          AssignFile(TFile1, 'GermanCars.txt');
+          AssignFile(TFile1, 'Textfile\GermanCars.txt');
           Reset(TFile1);
           append(TFile1);
           writeln(TFile1, sCar + ' - ' + sExhibit);
@@ -417,7 +417,7 @@ begin
       begin
         ImgContinent.Picture.LoadFromFile('Pictures\Europe Green.JPEG');
         iDifference := 2020 - iYear;
-        AssignFile(TFile, 'BritishCars.txt');
+        AssignFile(TFile, 'Textfile\BritishCars.txt');
         Reset(TFile);
         while not eof(TFile) do
         begin
@@ -430,7 +430,7 @@ begin
         if (iDifference > 29) and (bValidExhibit = true) then
         begin
           closefile(TFile);
-          AssignFile(TFile1, 'BritishCars.txt');
+          AssignFile(TFile1, 'Textfile\BritishCars.txt');
           Reset(TFile1);
           append(TFile1);
           writeln(TFile1, sCar + ' - ' + sExhibit);
@@ -465,7 +465,7 @@ begin
   iView := RgrpView.ItemIndex;
   if iView = 0 then
   begin
-    AssignFile(TFile, 'Name_Surname_Age.txt');
+    AssignFile(TFile, 'Textfile\Name_Surname_Age.txt');
     Reset(TFile);
     RedOutput.Lines.Add('Name' + #9 + 'Surname' + #9 + #9 + 'Age' + #13);
     while not eof(TFile) do
@@ -482,7 +482,7 @@ begin
 
   if iView = 1 then
   begin
-    AssignFile(TFile, 'CarTriviaWinners.txt');
+    AssignFile(TFile, 'Textfile\CarTriviaWinners.txt');
     Reset(TFile);
     RedOutput.Lines.Add('Name and Surname' + #9 + 'Prize' + #13);
     while not eof(TFile) do
@@ -497,7 +497,7 @@ begin
 
   if iView = 2 then
   begin
-    AssignFile(TFile, 'Reciept.txt');
+    AssignFile(TFile, 'Textfile\Reciept.txt');
     Reset(TFile);
     RedOutput.Lines.Add(
       'These reciepts are from purchases made from the Model Shop.' + #13 +
@@ -511,7 +511,7 @@ begin
 
   if iView = 3 then
   begin
-    AssignFile(TFile, 'Email.txt');
+    AssignFile(TFile, 'Textfile\Email.txt');
     Reset(TFile);
     RedOutput.Lines.Add('These are the e-mail addresses of Admin users.');
     while not eof(TFile) do
