@@ -130,7 +130,7 @@ begin
   begin
     RedOutput.Visible := true;
     RedOutput.Lines.Clear;
-    assignfile(TFile, 'ContinentText.txt');
+    assignfile(TFile, 'Textfile\ContinentText.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
@@ -143,7 +143,7 @@ begin
   begin
     RedOutput.Visible := true;
     RedOutput.Lines.Clear;
-    assignfile(TFile, 'HallHelp.txt');
+    assignfile(TFile, 'Textfile\HallHelp.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
@@ -156,7 +156,7 @@ begin
   begin
     RedOutput.Visible := true;
     RedOutput.Lines.Clear;
-    assignfile(TFile, 'CarTriviaHelp.txt');
+    assignfile(TFile, 'Textfile\CarTriviaHelp.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
@@ -169,7 +169,7 @@ begin
   begin
     RedOutput.Visible := true;
     RedOutput.Lines.Clear;
-    assignfile(TFile, 'GiftHelp.txt');
+    assignfile(TFile, 'Textfile\GiftHelp.txt');
     Reset(TFile);
     while not eof(TFile) do
     begin
